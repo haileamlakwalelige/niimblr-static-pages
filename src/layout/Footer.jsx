@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa6'
 const Footer = () => {
   return (
     <div className='px-2 sm:px-4 md:px-8 lg:px-16 xl:px-20 min-h-[50vh] py-12 border-t-[0.5px] border-gray-400'>
-        <div className='flex justify-between items-start flex-wrap lg:flex-nowrap'>
+        <div className='flex justify-between items-start flex-wrap gap-10 lg:flex-nowrap'>
             <div>
                 <img src={logo} alt="" className='h-[60px] pb-2'/>
                 <p className='font-extralight'>We simplify collaboration for creators and clients <br/> by making feedback easier and allowing teams to <br/> review all content types in a single platform.</p>
