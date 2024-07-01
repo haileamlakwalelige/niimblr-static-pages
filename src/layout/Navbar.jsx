@@ -15,7 +15,7 @@ const Navbar = () => {
     setShow(false);
   }
   return (
-    <div className="min-h-[80px] py-2 shadow-xl w-screen">
+    <div className="min-h-[80px] py-3 shadow-xl w-screen fixed">
       <div className="flex justify-between px-2 sm:px-4 md:px-8 lg:px-16 xl:px-20">
         <div>
           <img src={logo} alt="" className="w-full h-[60px] z-50" />
