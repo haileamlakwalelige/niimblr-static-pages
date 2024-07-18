@@ -303,7 +303,7 @@ export default function Home() {
     <div>
       <div className="lg:flex">
         <div className="lg:ml-[6rem] ml-[1rem]">
-          <p className="lg:text-[3rem] lg:block hidden leading-tight font-bold lg:mt-[3rem] mt-[1rem]">
+          <p className="lg:text-[3rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">feedback </span>
             &nbsp;platform <br />
@@ -319,7 +319,7 @@ export default function Home() {
             digital creators
           </p>
 
-          <p className="mt-4 text-[#abacac] text-lg">
+          <p className="mt-4 text-[#abacac] text-md">
             Niimblr improves digital creators' production process, for fewer
             <br />
             iterations and better client relations.
