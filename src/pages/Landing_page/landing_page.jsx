@@ -303,13 +303,13 @@ export default function Home() {
     <div>
       <div className="lg:flex">
         <div className="lg:ml-[6rem] ml-[1rem]">
-          <p className="lg:text-[3.2rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
+          <p className="lg:text-[3.4rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">feedback </span>
             &nbsp;platform <br />
             for digital creators
           </p>
-          <p className="text-[3.2rem] lg:hidden leading-tight font-semibold mt-[3rem]">
+          <p className="text-[3.4rem] lg:hidden leading-tight font-semibold mt-[3rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">
               feedback
@@ -371,7 +371,7 @@ export default function Home() {
         ></iframe>
       </div>
       <div className="leading-tight">
-        <p className="flex justify-center text-[3.2rem] font-semibold ">
+        <p className="flex justify-center text-[3.4rem] font-semibold ">
           Fewer iterations,
         </p>
 
