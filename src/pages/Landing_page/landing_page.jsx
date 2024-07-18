@@ -303,7 +303,7 @@ export default function Home() {
     <div>
       <div className="lg:flex">
         <div className="lg:ml-[6rem] ml-[1rem]">
-          <p className="lg:text-[3rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
+          <p className="lg:text-[3.2rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">feedback </span>
             &nbsp;platform <br />
@@ -335,7 +335,7 @@ export default function Home() {
         </div>
 
         <div className="mr-[2rem] my-[1rem]">
-          <img src="/1_Hero_Active-2.png" alt="Hero" />
+          <img src="/1_Hero_Active-2.png" className="h-[18rem]" alt="Hero" />
         </div>
       </div>
       <div className="flex items-center justify-center mt-[7rem]">
