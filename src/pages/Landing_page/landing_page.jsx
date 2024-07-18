@@ -375,7 +375,7 @@ export default function Home() {
           Fewer iterations,
         </p>
 
-        <p className="flex justify-center text-[3.2rem] font-semibold ">
+        <p className="flex justify-center text-[3.4rem] font-semibold ">
           better client relations{" "}
         </p>
       </div>
@@ -393,7 +393,7 @@ export default function Home() {
           >
             <div className="lg:w-1/2">
               <h2 className="text-[2.5rem] font-semibold mb-2">{item.title}</h2>
-              <p className="text-md text-[#abacac]">{item.description}</p>
+              <p className="text-[18px] text-[#abacac]">{item.description}</p>
             </div>
             <div className="lg:w-1/2">
               <img
