@@ -371,7 +371,7 @@ export default function Home() {
         ></iframe>
       </div>
       <div className="leading-tight">
-        <p className="flex justify-center text-[3.5rem] font-bold ">
+        <p className="flex justify-center text-[3.2rem] font-semibold ">
           Fewer iterations,
         </p>
 
@@ -379,7 +379,7 @@ export default function Home() {
           better client relations{" "}
         </p>
       </div>
-      <div className="mt-10 mx-[5rem] items-center justify-between">
+      <div className="mt-10 mx-[6rem] items-center justify-between">
         {qunality.map((item, index) => (
           <div
             key={index}
@@ -393,7 +393,7 @@ export default function Home() {
           >
             <div className="lg:w-1/2">
               <h2 className="text-[2.5rem] font-semibold mb-2">{item.title}</h2>
-              <p className="text-lg text-[#abacac]">{item.description}</p>
+              <p className="text-md text-[#abacac]">{item.description}</p>
             </div>
             <div className="lg:w-1/2">
               <img
