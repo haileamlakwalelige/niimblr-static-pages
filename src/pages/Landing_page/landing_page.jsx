@@ -375,7 +375,7 @@ export default function Home() {
           Fewer iterations,
         </p>
 
-        <p className="flex justify-center text-[3.5rem] font-bold ">
+        <p className="flex justify-center text-[3.2rem] font-semibold ">
           better client relations{" "}
         </p>
       </div>
@@ -406,21 +406,21 @@ export default function Home() {
         ))}
       </div>
       <div className="justify-center mt-[6rem]">
-        <p className="text-[3.5rem] justify-center flex font-bold">
+        <p className="text-[3.2rem] justify-center flex font-semibold">
           Supported formats
         </p>
-        <p className="text-lg flex justify-center text-[#abacac]">
+        <p className="text-md flex justify-center text-[#abacac]">
           Feedback is time-consuming and confusing for digital creators and
           clients.{" "}
         </p>
-        <p className="text-lg flex justify-center text-[#abacac]">
+        <p className="text-md flex justify-center text-[#abacac]">
           Miscommunication leads to conflicts and delays.
         </p>
-        <div className="mt-10 grid grid-cols-1 lg:flex lg:justify-center  gap-4 mx-[5rem]">
+        <div className="mt-10 grid grid-cols-1 lg:flex lg:justify-center  gap-4 mx-[8rem]">
           {formats.map((format, index) => (
             <div
               key={index}
-              className="p-6 rounded-2xl shadow-2xl w-[14rem] text-white"
+              className="p-4 rounded-2xl shadow-2xl w-[13rem] text-white"
               style={{
                 background:
                   "linear-gradient(180deg, #1e293b 0%, #344561 5%, #1e293b 100%, #1e293b 100%, #1e293b 100%)",
