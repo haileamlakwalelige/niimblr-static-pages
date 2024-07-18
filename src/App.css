@@ -1,0 +1,20 @@
+@keyframes carousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%  );
+    }
+  }
+  
+  .carousel {
+    display: flex;
+    animation: carousel 50s linear infinite;
+  }
+  
+  .carousel-item {
+   
+    min-width: 25%; /* Adjust this to fit the number of items you have */
+    transition: transform 1s ease-in-out;
+  }
+  

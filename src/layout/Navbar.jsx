@@ -18,10 +18,10 @@ const Navbar = () => {
 
   return (
     <div className="min-h-[80px] py-3 shadow-xl z-50 w-screen fixed">
-      <div className="flex justify-between px-2 sm:px-4 md:px-8 lg:px-16 xl:px-20">
-        <div>
+      <div className="flex justify-between px-2 sm:px-4 md:px-8 lg:px-16 xl:px-[6rem]">
+        <Link to="/">
           <img src={logo} alt="Logo" className="w-full h-[60px] z-50" />
-        </div>
+        </Link>
         <div className="hidden lg:flex justify-center items-center gap-4 lg:gap-10">
           <p className="font-medium cursor-pointer">Pricing</p>
           <Link to="/blog" className="font-medium cursor-pointer">
