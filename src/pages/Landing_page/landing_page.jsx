@@ -303,7 +303,7 @@ export default function Home() {
     <div>
       <div className="lg:flex">
         <div className="lg:ml-[6rem] ml-[1rem]">
-          <p className="lg:text-[3.5rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
+          <p className="lg:text-[3rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">feedback </span>
             &nbsp;platform <br />
@@ -755,7 +755,9 @@ export default function Home() {
             "linear-gradient(180deg, #48a1fb 0%, #1989fa 5%, # 100%, #48a1fb 100%, #48a1fb 100%)",
         }}
       >
-        <p className="text-[3.5rem] font-semibold flex justify-center text-black mb-[1rem]">Ready to get started?</p>
+        <p className="text-[3.5rem] font-semibold flex justify-center text-black mb-[1rem]">
+          Ready to get started?
+        </p>
         <p className="font-light flex  text-lg text-black justify-center">
           Start using Niimblr today and see what a difference it can make to
           your daily back and
@@ -768,7 +770,9 @@ export default function Home() {
           working with content feedback
         </p>
         <div className="bg-black mt-[2rem] w-[11rem] mx-auto rounded-lg flex justify-center">
-          <p className="text-white px-5 py-4 text-[1.1rem] flex justify-center font-semibold">Signup for free</p>
+          <p className="text-white px-5 py-4 text-[1.1rem] flex justify-center font-semibold">
+            Signup for free
+          </p>
         </div>
         <p className="font-light text-black flex pt-2 justify-center">
           Free forever.<span className="font-semibold "> No credit card</span>{" "}
