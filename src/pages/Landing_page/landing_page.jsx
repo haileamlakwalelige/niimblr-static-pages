@@ -345,7 +345,7 @@ export default function Home() {
         Who said <span className="text-[#0b82fa]">&nbsp;what, and when?</span>
       </p>
       <div className="flex justify-center mt-6">
-        <p className="grid text-lg text-[#abacac]">
+        <p className="grid text-md text-[#abacac]">
           Feedback is time-consuming and confusing for digital creators and
           clients.
           <br />
@@ -359,8 +359,8 @@ export default function Home() {
       </div>
       <div className="flex justify-center  my-10">
         <iframe
-          width="1000"
-          height="600"
+          width="900"
+          height="500"
           className="rounded-3xl"
           src="https://www.youtube.com/embed/Aea4YG4N288?si=Q3vnFiHPhIJJD69b"
           title="YouTube video player"
