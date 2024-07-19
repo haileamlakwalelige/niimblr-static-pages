@@ -26,7 +26,7 @@ const FAQItem = ({ question, answer, index, isOpen, toggleOpen }) => (
       className="flex justify-between hover:bg-[#1a3046] items-center w-full cursor-pointer"
       onClick={() => toggleOpen(index)}
     >
-      <p className="text-xl font-semibold p-4">{question}</p>
+      <p className="text-lg font-semibold p-4">{question}</p>
       <MdNavigateNext
         className={`pr-4 transition-transform duration-500 ${
           isOpen ? "rotate-90" : ""
@@ -40,7 +40,7 @@ const FAQItem = ({ question, answer, index, isOpen, toggleOpen }) => (
       }`}
       style={{ backgroundColor: "#5c5c5c" }}
     >
-      <ul className="text-md  hover:bg-[#1a3046] px-16 float-start justify-start text-[#cacaca] list-disc list-inside">
+      <ul className="text-sm  hover:bg-[#1a3046] px-16 float-start justify-start text-[#cacaca] list-disc list-inside">
         {answer.map((text, idx) => (
           <li key={idx}>{text}</li>
         ))}
@@ -303,13 +303,13 @@ export default function Home() {
     <div>
       <div className="lg:flex">
         <div className="lg:ml-[10rem] justify-between  ml-[1rem]">
-          <p className="lg:text-[3.7rem] lg:block hidden leading-tight font-semibold lg:mt-[6rem] mt-[1rem]">
+          <p className="lg:text-[3rem] lg:block hidden leading-tight font-semibold lg:mt-[6rem] mt-[1rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">feedback </span>
             &nbsp;platform <br />
             for digital creators
           </p>
-          <p className="text-[3.5rem] lg:hidden leading-tight font-semibold mt-[3rem]">
+          <p className="text-[3rem] lg:hidden leading-tight font-semibold mt-[3rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">
               feedback
@@ -371,11 +371,11 @@ export default function Home() {
         ></iframe>
       </div>
       <div className="leading-tight">
-        <p className="flex justify-center text-[3.7rem] font-semibold ">
+        <p className="flex justify-center text-[3rem] font-semibold ">
           Fewer iterations,
         </p>
 
-        <p className="flex justify-center text-[3.7rem] font-semibold ">
+        <p className="flex justify-center text-[3rem] font-semibold ">
           better client relations{" "}
         </p>
       </div>
@@ -383,7 +383,7 @@ export default function Home() {
         {qunality.map((item, index) => (
           <div
             key={index}
-            className={`flex flex-col justify-between shadow-2xl p-10 rounded-2xl lg:flex-row ${
+            className={`flex flex-col justify-between shadow-2xl p-5 rounded-2xl lg:flex-row ${
               index % 2 === 0 ? "" : "lg:flex-row-reverse"
             } items-center mb-10`}
             style={{
@@ -392,8 +392,8 @@ export default function Home() {
             }}
           >
             <div className="lg:w-1/2">
-              <h2 className="text-[2.5rem] font-semibold mb-2">{item.title}</h2>
-              <p className="text-[18px] text-[#abacac]">{item.description}</p>
+              <h2 className="text-[2.4rem] leading-tight font-semibold mb-2">{item.title}</h2>
+              <p className="text-[15px] text-[#abacac]">{item.description}</p>
             </div>
             <div className="lg:w-1/2">
               <img
@@ -406,7 +406,7 @@ export default function Home() {
         ))}
       </div>
       <div className="justify-center mt-[6rem]">
-        <p className="text-[3.7rem] justify-center flex font-semibold">
+        <p className="text-[3.2rem] justify-center flex font-semibold">
           Supported formats
         </p>
         <p className="text-md flex justify-center text-[#abacac]">
@@ -442,10 +442,10 @@ export default function Home() {
                   <IoHeadset size={40} className="" />
                 )}
               </div>
-              <h2 className="text-[2rem] flex justify-center font-semibold mb-2">
+              <h2 className="text-[1.5rem] flex justify-center font-semibold mb-2">
                 {format.title}
               </h2>
-              <p className="text-[15px] text-[#abacac] flex justify-center">
+              <p className="text-[13px] text-[#abacac] flex justify-center">
                 {format.description}
               </p>
             </div>
@@ -453,7 +453,7 @@ export default function Home() {
         </div>
       </div>
 
-      <p className="text-[3.7rem] justify-center flex font-semibold mt-[6rem]">
+      <p className="text-[3.2rem] justify-center flex font-semibold mt-[6rem]">
         What users say
       </p>
       <p className="text-lg flex justify-center text-[#abacac]">
@@ -532,10 +532,10 @@ export default function Home() {
         </div>
       </div>
       <div className="leading-tight">
-        <p className="text-[3.7rem] justify-center flex font-semibold mt-[6rem]">
+        <p className="text-[3.2rem] justify-center flex font-semibold mt-[6rem]">
           It's simpler with
         </p>
-        <p className="text-[3.7rem] justify-center flex font-semibold ">
+        <p className="text-[3.2rem] justify-center flex font-semibold ">
           Niimblr
         </p>
       </div>
@@ -602,7 +602,7 @@ export default function Home() {
               )}
               {format.title === "Audio" && <IoHeadset size={40} className="" />}
             </div>
-            <h2 className="text-[2rem]  font-semibold mb-2">{format.title}</h2>
+            <h2 className="text-[1.5rem]  font-semibold mb-2">{format.title}</h2>
             <p className="text-[15px] text-[#abacac] ">{format.description}</p>
           </div>
         ))}
@@ -615,7 +615,7 @@ export default function Home() {
               "linear-gradient(180deg, #1e293b 0%, #1e293b 5%, #122f4b 100%, #1e293b 100%, #1e293b 100%)",
           }}
         >
-          <p className="text-[3.5rem] justify-center flex font-bold">
+          <p className="text-[3.2rem] justify-center flex font-bold">
             Get more work done
           </p>
           <p className="text-xl mt-5 text-[#cacaca] justify-center flex">
@@ -642,11 +642,11 @@ export default function Home() {
         Are you a creator?
       </p>
 
-      <p className="text-[3.7rem] justify-center flex font-semibold">
+      <p className="text-[3.2rem] justify-center flex font-semibold">
         Your clients will love it
       </p>
 
-      <p className="text-lg flex justify-center text-[#abacac]">
+      <p className="text-md flex justify-center text-[#abacac]">
         Niimblr is the preferred feedback platform for client-facing
         professions, including:
       </p>
@@ -669,44 +669,44 @@ export default function Home() {
               {id.id == 5 && <PiBuildingsFill />}
               {id.id == 6 && <BsLightningChargeFill />}
               {id.id == 7 && <FaPlus />}
-              <p className="ml-1 font-semibold">{id.name}</p>
+              <p className="ml-1 font-semibold text-[13.5px]">{id.name}</p>
             </div>
           </div>
         ))}
       </div>
       <div className="flex mx-[11rem]">
         <div>
-          <p className="text-lg mt-16 text-[#cacaca]">
+          <p className="text-md mt-16 text-[#cacaca]">
             Niimblr empowers your clients to provide clear and transparent
             feedback. Everything agreed upon is visible on the platform,
             eliminating discussions and confusion. Clients can easily access and
             review files in 2D, 3D, or video and download them directly from the
             platform.
           </p>
-          <p className="text-lg mt-8 text-[#cacaca]">
+          <p className="text-md mt-8 text-[#cacaca]">
             No special setup or artist assistance needed – simply send them an
             invite link to Niimblr and they are ready to provide feedback.
           </p>
-          <div className="bg-[#0b82fa] my-5 lg:ml-0 ml-[1rem] mt-10 items-center justify-between font-semibold text-xl py-3 px-5 rounded-xl w-[12rem] flex">
+          <div className="bg-[#0b82fa] my-5 lg:ml-0 ml-[1rem] mt-10 items-center justify-between  text-lg py-3 px-5 rounded-xl w-[12rem] flex">
             <p className="">Try for free</p>
             <GrFormNext className="font-bold" />
           </div>
         </div>
-        <img src="/image-6.png" className="h-[16rem] ml-16 mt-16" />
+        <img src="/image-6.png" className="h-[12rem] ml-16 mt-16" />
       </div>
       <div className="bg-[#1e1e1e] pl-[11rem] pr-[8rem] py-[5rem] flex">
         <img src="/Founders.png" className="h-[22rem] py-[1rem] " />
         <div className="ml-[2rem]">
           <p className="text-[#0d80fa] text-xl font-bold">The Team</p>
-          <p className="text-[3.8rem] justify-center pt-2 flex font-semibold leading-tight">
+          <p className="text-[3rem] justify-center pt-2 flex font-semibold leading-tight">
             Meet the amazing Creators of Niimblr
           </p>
-          <p className="text-lg mt-8 text-[#cacaca]">
+          <p className="text-md mt-6 text-[#cacaca]">
             The Niimblr platform is designed by a team with 45+ years of
             experience in product visualization, game design, engineering, and
             more.
           </p>
-          <p className="text-lg mt-5 text-[#cacaca]">
+          <p className="text-md mt-5 text-[#cacaca]">
             We founded our company in 2021 in Copenhagen, Denmark, with the
             mission of revolutionizing the feedback process between digital
             creators and their clients.
@@ -717,18 +717,18 @@ export default function Home() {
         Still confused
       </p>
       <div className="leading-tight">
-        <p className="text-[3.8rem] justify-center pt-2 flex font-semibold leading-tight">
+        <p className="text-[3.2rem] justify-center pt-2 flex font-semibold leading-tight">
           See the Frequently Asked
         </p>
-        <p className="text-[3.8rem] justify-center  flex font-semibold leading-tight">
+        <p className="text-[3.2rem] justify-center  flex font-semibold leading-tight">
           {" "}
           Questions
         </p>
-        <p className="text-lg p-1 leading-tight text-[#cacaca] justify-center flex">
+        <p className="text-md p-1 leading-tight text-[#cacaca] justify-center flex">
           You ask. We tell. We have compiled the answers to some of the most
           asked questions.
         </p>
-        <p className="text-lg  text-[#cacaca] justify-center flex">
+        <p className="text-md  text-[#cacaca] justify-center flex">
           Should you need more information, do not hesitate to&nbsp;{" "}
           <span className="text-[#0d80fa] font-semibold underline">
             contact us
@@ -757,28 +757,28 @@ export default function Home() {
         //     "linear-gradient(180deg, #48a1fb 0%, #1989fa 5%, #48a1fb 100%, #48a1fb 100%, #48a1fb 100%)",
         // }}
       >
-        <p className="text-[3.5rem] font-semibold flex justify-center text-black mb-[1rem]">
+        <p className="text-[3.2rem] font-semibold flex justify-center text-black mb-[1rem]">
           Ready to get started?
         </p>
-        <p className="font-light flex  text-lg text-black justify-center">
+        <p className="font-light flex  text-md text-black justify-center">
           Start using Niimblr today and see what a difference it can make to
           your daily back and
         </p>
-        <p className="font-light text-lg text-black flex items-center justify-center">
+        <p className="font-light text-md text-black flex items-center justify-center">
           forth with clients. Simply sign up, create a project, and you are
           ready for a new way of
         </p>
-        <p className="font-light text-lg text-black flex justify-center">
+        <p className="font-light text-md text-black flex justify-center">
           working with content feedback
         </p>
         <div className="bg-black mt-[2rem] w-[11rem] mx-auto rounded-lg flex justify-center">
-          <p className="text-white px-5 py-4 text-[1.1rem] flex justify-center font-semibold">
-            Signup for free
+          <p className="text-white px-5 py-4 text-[1rem] flex justify-center ">
+            Sign up for free
           </p>
         </div>
-        <p className="font-light text-black flex pt-2 justify-center">
-          Free forever.<span className="font-semibold "> No credit card</span>{" "}
-          required
+        <p className="font-light text-md text-black flex pt-2 justify-center">
+          Free forever.<span className="font-semibold "> No credit card </span>{" "}
+           &nbsp;required
         </p>
       </div>
     </div>
