@@ -751,11 +751,11 @@ export default function Home() {
         </div>
       </div>
       <div
-        className=" py-[4rem]"
-        style={{
-          background:
-            "linear-gradient(180deg, #48a1fb 0%, #1989fa 5%, #48a1fb 100%, #48a1fb 100%, #48a1fb 100%)",
-        }}
+        className=" py-[4rem] bg-[#48a1fb]"
+        // style={{
+        //   background:
+        //     "linear-gradient(180deg, #48a1fb 0%, #1989fa 5%, #48a1fb 100%, #48a1fb 100%, #48a1fb 100%)",
+        // }}
       >
         <p className="text-[3.5rem] font-semibold flex justify-center text-black mb-[1rem]">
           Ready to get started?
