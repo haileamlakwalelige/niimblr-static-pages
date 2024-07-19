@@ -302,14 +302,14 @@ export default function Home() {
   return (
     <div>
       <div className="lg:flex">
-        <div className="lg:ml-[6rem] ml-[1rem]">
-          <p className="lg:text-[3.4rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
+        <div className="lg:ml-[6rem] justify-between  ml-[1rem]">
+          <p className="lg:text-[3.5rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">feedback </span>
             &nbsp;platform <br />
             for digital creators
           </p>
-          <p className="text-[3.4rem] lg:hidden leading-tight font-semibold mt-[3rem]">
+          <p className="text-[3.5rem] lg:hidden leading-tight font-semibold mt-[3rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">
               feedback
@@ -334,8 +334,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mr-[2rem] my-[1rem]">
-          <img src="/1_Hero_Active-2.png" className="h-[30rem]" alt="Hero" />
+        <div className="ml-[2rem] my-[1rem]">
+          <img src="/1_Hero_Active-2.png" className="h-[33rem]" alt="Hero" />
         </div>
       </div>
       <div className="flex items-center justify-center mt-[7rem]">
