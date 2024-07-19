@@ -302,8 +302,8 @@ export default function Home() {
   return (
     <div>
       <div className="lg:flex">
-        <div className="lg:ml-[6rem] justify-between  ml-[1rem]">
-          <p className="lg:text-[3.5rem] lg:block hidden leading-tight font-semibold lg:mt-[3rem] mt-[1rem]">
+        <div className="lg:ml-[10rem] justify-between  ml-[1rem]">
+          <p className="lg:text-[3.7rem] lg:block hidden leading-tight font-semibold lg:mt-[6rem] mt-[1rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">feedback </span>
             &nbsp;platform <br />
@@ -335,7 +335,7 @@ export default function Home() {
         </div>
 
         <div className="ml-[2rem] my-[1rem]">
-          <img src="/1_Hero_Active-2.png" className="h-[33rem]" alt="Hero" />
+          <img src="/1_Hero_Active-2.png" className="h-[31rem]" alt="Hero" />
         </div>
       </div>
       <div className="flex items-center justify-center mt-[7rem]">
@@ -371,11 +371,11 @@ export default function Home() {
         ></iframe>
       </div>
       <div className="leading-tight">
-        <p className="flex justify-center text-[3.4rem] font-semibold ">
+        <p className="flex justify-center text-[3.7rem] font-semibold ">
           Fewer iterations,
         </p>
 
-        <p className="flex justify-center text-[3.4rem] font-semibold ">
+        <p className="flex justify-center text-[3.7rem] font-semibold ">
           better client relations{" "}
         </p>
       </div>
@@ -406,7 +406,7 @@ export default function Home() {
         ))}
       </div>
       <div className="justify-center mt-[6rem]">
-        <p className="text-[3.2rem] justify-center flex font-semibold">
+        <p className="text-[3.7rem] justify-center flex font-semibold">
           Supported formats
         </p>
         <p className="text-md flex justify-center text-[#abacac]">
@@ -453,7 +453,7 @@ export default function Home() {
         </div>
       </div>
 
-      <p className="text-[3.5rem] justify-center flex font-bold mt-[6rem]">
+      <p className="text-[3.7rem] justify-center flex font-semibold mt-[6rem]">
         What users say
       </p>
       <p className="text-lg flex justify-center text-[#abacac]">
@@ -486,7 +486,7 @@ export default function Home() {
                 border: "0.1px solid gray",
               }}
             >
-              <p className="text-lg text-[#cacaca]">{comment.comment}</p>
+              <p className="text-md text-[#cacaca] italic">{comment.comment}</p>
               <div className="flex items-center gap-4">
                 <img
                   className="rounded-full justify-start w-[3rem]"
@@ -519,7 +519,7 @@ export default function Home() {
                 border: "0.1px solid gray",
               }}
             >
-              <p className="text-lg text-[#cacaca]">{comment.comment}</p>
+              <p className="text-md italic text-[#cacaca]">{comment.comment}</p>
               <div className="flex items-center gap-4">
                 <img
                   className="rounded-full justify-start w-[3rem]"
@@ -532,10 +532,10 @@ export default function Home() {
         </div>
       </div>
       <div className="leading-tight">
-        <p className="text-[3.5rem] justify-center flex font-bold mt-[6rem]">
+        <p className="text-[3.7rem] justify-center flex font-semibold mt-[6rem]">
           It's simpler with
         </p>
-        <p className="text-[3.5rem] justify-center flex font-bold ">Niimblr</p>
+        <p className="text-[3.7rem] justify-center flex font-semibold ">Niimblr</p>
       </div>
       <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3 mx-[10rem] lg:justify-center">
         {how.map((format, index) => (
