@@ -535,7 +535,9 @@ export default function Home() {
         <p className="text-[3.7rem] justify-center flex font-semibold mt-[6rem]">
           It's simpler with
         </p>
-        <p className="text-[3.7rem] justify-center flex font-semibold ">Niimblr</p>
+        <p className="text-[3.7rem] justify-center flex font-semibold ">
+          Niimblr
+        </p>
       </div>
       <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3 mx-[10rem] lg:justify-center">
         {how.map((format, index) => (
@@ -640,7 +642,7 @@ export default function Home() {
         Are you a creator?
       </p>
 
-      <p className="text-[3.5rem] justify-center flex font-bold">
+      <p className="text-[3.7rem] justify-center flex font-semibold">
         Your clients will love it
       </p>
 
@@ -696,7 +698,7 @@ export default function Home() {
         <img src="/Founders.png" className="h-[22rem] py-[1rem] " />
         <div className="ml-[2rem]">
           <p className="text-[#0d80fa] text-xl font-bold">The Team</p>
-          <p className="text-[3.5rem] justify-center pt-2 flex font-bold leading-tight">
+          <p className="text-[3.8rem] justify-center pt-2 flex font-semibold leading-tight">
             Meet the amazing Creators of Niimblr
           </p>
           <p className="text-lg mt-8 text-[#cacaca]">
@@ -715,10 +717,10 @@ export default function Home() {
         Still confused
       </p>
       <div className="leading-tight">
-        <p className="text-[3.5rem] justify-center pt-2 flex font-bold leading-tight">
+        <p className="text-[3.8rem] justify-center pt-2 flex font-semibold leading-tight">
           See the Frequently Asked
         </p>
-        <p className="text-[3.5rem] justify-center  flex font-bold leading-tight">
+        <p className="text-[3.8rem] justify-center  flex font-semibold leading-tight">
           {" "}
           Questions
         </p>
@@ -752,7 +754,7 @@ export default function Home() {
         className=" py-[4rem]"
         style={{
           background:
-            "linear-gradient(180deg, #48a1fb 0%, #1989fa 5%, # 100%, #48a1fb 100%, #48a1fb 100%)",
+            "linear-gradient(180deg, #48a1fb 0%, #1989fa 5%, #48a1fb 100%, #48a1fb 100%, #48a1fb 100%)",
         }}
       >
         <p className="text-[3.5rem] font-semibold flex justify-center text-black mb-[1rem]">
