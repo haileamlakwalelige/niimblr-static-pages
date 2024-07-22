@@ -687,12 +687,12 @@ export default function Home() {
             No special setup or artist assistance needed – simply send them an
             invite link to Niimblr and they are ready to provide feedback.
           </p>
-          <div className="bg-[#0b82fa] my-5 lg:ml-0 ml-[1rem] mt-10 items-center justify-between  text-lg py-3 px-5 rounded-xl w-[12rem] flex">
+          <div className="bg-[#0b82fa] my-5 lg:ml-0 ml-[1rem] mt-7 items-center justify-between  text-lg py-3 px-5 rounded-xl w-[12rem] flex">
             <p className="">Try for free</p>
             <GrFormNext className="font-bold" />
           </div>
         </div>
-        <img src="/image-6.png" className="h-[12rem] ml-16 mt-16" />
+        <img src="/image-6.png" className="h-[16rem] ml-12 mt-16" />
       </div>
       <div className="bg-[#1e1e1e] pl-[11rem] pr-[8rem] py-[5rem] flex">
         <img src="/Founders.png" className="h-[22rem] py-[1rem] " />

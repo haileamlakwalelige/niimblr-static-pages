@@ -1,38 +1,33 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BCard from "../../components/Blog/Card";
-import Navbar from "../../layout/Navbar";
-import Footer from "../../layout/Footer";
-import axios from "axios";
+
 
 const ITEMS_PER_PAGE = 4;
 
 export default function Blog() {
-  // const [blogs, setBlogs] = useState([]);
-  // useEffect(() => {
-  //   fetch("http://192.168.100.40:8000//api/v1/blogs")
-  //     .then((response) => response.json())
-  //     .then((data) => setBlogs(data.data))
-  //     .catch((error) => console.error("Error fetching data:", error));
-  // }, []);
 
-  const [blogs, setBlogs]=useState([]);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("http://192.168.100.40:8000/api/v1/blogs");
-        const data =await response.json();
-        setBlogs(data); // Access the 'data' field from the response
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
+    fetch("http://192.168.100.40:8000/api/v1/blogs")
+      .then((response) => {
+        // Correctly access the data array from the response
+        setData(response.data.data); // Assuming the API returns { data: [...] }
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, []);
 
-  console.log("blogs", blogs);
+
+  console.log("data", data);
+
+
+  // Check if data is loaded before trying to map over it
+  if (!data) return <div>Loading...</div>;
+
+  console.log("data", data);
 
   const [currentPage, setCurrentPage] = useState(1);
   // Initialize useHistory for navigation
@@ -60,17 +55,17 @@ export default function Blog() {
       </p>
       <div className="lg:mx-[4rem]">
         <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 lg:grid-cols-3 lg:mx-[3rem]">
-          {blogs.map(({ blogs }) => (
+          {data.map(({ blog }) => (
             <BCard
-              key={blogs.id}
-              id={blogs.id}
-              description={blogs.content}
-              title={blogs.title}
-              feature={blogs.title}
-              curr={blogs.thumbnail}
-              Bdate={blogs.updated_at}
-              onReadMore={() => handleReadMore(blogs.id)}
-              readMore={<Link to={`/blog/${blogs.id}`}>Read More</Link>}
+              key={blog.id}
+              id={blog.id}
+              description={blog.content}
+              title={blog.title}
+              feature={blog.title}
+              curr={blog.thumbnail}
+              Bdate={blog.updated_at}
+              onReadMore={() => handleReadMore(blog.id)}
+              readMore={<Link to={`/blog/${blog.id}`}>Read More</Link>}
             />
           ))}
         </div>
