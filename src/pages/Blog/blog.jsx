@@ -58,12 +58,7 @@ export default function Blog() {
           {data.map(({ blog }) => (
             <BCard
               key={blog.id}
-              id={blog.id}
-              description={blog.content}
-              title={blog.title}
-              feature={blog.title}
-              curr={blog.thumbnail}
-              Bdate={blog.updated_at}
+             blog={blog}
               onReadMore={() => handleReadMore(blog.id)}
               readMore={<Link to={`/blog/${blog.id}`}>Read More</Link>}
             />

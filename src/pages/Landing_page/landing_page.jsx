@@ -26,7 +26,7 @@ const FAQItem = ({ question, answer, index, isOpen, toggleOpen }) => (
       className="flex justify-between hover:bg-[#1a3046] items-center w-full cursor-pointer"
       onClick={() => toggleOpen(index)}
     >
-      <p className="text-lg font-semibold p-4">{question}</p>
+      <p className="text-lg font-semibold lg:p-4 p-2">{question}</p>
       <MdNavigateNext
         className={`pr-4 transition-transform duration-500 ${
           isOpen ? "rotate-90" : ""
@@ -40,7 +40,7 @@ const FAQItem = ({ question, answer, index, isOpen, toggleOpen }) => (
       }`}
       style={{ backgroundColor: "#5c5c5c" }}
     >
-      <ul className="text-sm  hover:bg-[#1a3046] px-16 float-start justify-start text-[#cacaca] list-disc list-inside">
+      <ul className="text-sm  hover:bg-[#1a3046] lg:px-16 px-8 float-start justify-start text-[#cacaca] list-disc list-inside">
         {answer.map((text, idx) => (
           <li key={idx}>{text}</li>
         ))}
@@ -309,7 +309,7 @@ export default function Home() {
             &nbsp;platform <br />
             for digital creators
           </p>
-          <p className="text-[3rem] lg:hidden leading-tight font-semibold mt-[3rem]">
+          <p className="text-[2.4rem] lg:hidden leading-tight font-semibold mt-[3rem]">
             The client <br />
             <span className="text-[#0b82fa] underline">
               feedback
@@ -324,7 +324,7 @@ export default function Home() {
             <br />
             iterations and better client relations.
           </p>
-          <div className="bg-[#0b82fa] my-5 lg:ml-0 ml-[1rem] items-center justify-between font-semibold text-xl py-3 px-5 rounded-xl w-[18rem] flex">
+          <div className="bg-[#0b82fa] my-5 lg:ml-0  items-center justify-between font-semibold text-xl py-3 px-5 rounded-xl w-[18rem] flex">
             <p className="">Get Started - It's free</p>
             <GrFormNext className="font-bold" />
           </div>
@@ -334,18 +334,26 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="ml-[2rem] my-[1rem]">
-          <img src="/1_Hero_Active-2.png" className="h-[31rem]" alt="Hero" />
+        <div className="ml-[0rem] my-[1rem]">
+          <img src="/1_Hero_Active-2.png" className="lg:h-[31rem]" alt="Hero" />
         </div>
       </div>
-      <div className="flex items-center justify-center mt-[7rem]">
+      <div className="flex items-center justify-center lg:mt-[7rem] mt-[5rem]">
         <PiHandTapFill className="text-[#0b82fa]" size={40} />
       </div>
-      <p className="text-[2.5rem] font-semibold mt-4 flex justify-center">
+      <p className="text-[2.5rem]  hidden font-semibold mt-4 lg:flex justify-center">
         Who said <span className="text-[#0b82fa]">&nbsp;what, and when?</span>
       </p>
+      <div className="leading-tight">
+        <p className="text-[2rem] lg:hidden font-semibold mt-4 flex justify-center">
+          Who said <span className="text-[#0b82fa]">&nbsp;what, and</span>
+        </p>
+        <p className="text-[2rem] lg:hidden font-semibold flex justify-center">
+          when?
+        </p>
+      </div>
       <div className="flex justify-center mt-6">
-        <p className="grid text-md text-[#abacac]">
+        <p className="grid text-center lg:text-md text-[17px] px-2 text-[#abacac]">
           Feedback is time-consuming and confusing for digital creators and
           clients.
           <br />
@@ -357,7 +365,7 @@ export default function Home() {
           </span>
         </p>
       </div>
-      <div className="flex justify-center  my-10">
+      <div className="lg:flex justify-center hidden  my-10">
         <iframe
           width="900"
           height="500"
@@ -370,16 +378,32 @@ export default function Home() {
           allowFullScreen
         ></iframe>
       </div>
+
+      {/* for mobile view */}
+      <div className="flex justify-center lg:hidden mx-3  my-10">
+        <iframe
+          width="400"
+          height="200"
+          className="rounded-3xl"
+          src="https://www.youtube.com/embed/Aea4YG4N288?si=Q3vnFiHPhIJJD69b"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </div>
+
       <div className="leading-tight">
-        <p className="flex justify-center text-[3rem] font-semibold ">
+        <p className="flex justify-center lg:text-[3rem] pt-5 text-[2.1rem] font-semibold ">
           Fewer iterations,
         </p>
 
-        <p className="flex justify-center text-[3rem] font-semibold ">
+        <p className="flex justify-center lg:text-[3rem] text-[2.1rem] font-semibold ">
           better client relations{" "}
         </p>
       </div>
-      <div className="mt-10 mx-[6rem] items-center justify-between">
+      <div className="mt-10 lg:mx-[6rem] mx-[1rem] items-center justify-between">
         {qunality.map((item, index) => (
           <div
             key={index}
@@ -392,13 +416,17 @@ export default function Home() {
             }}
           >
             <div className="lg:w-1/2">
-              <h2 className="text-[2.4rem] leading-tight font-semibold mb-2">{item.title}</h2>
-              <p className="text-[15px] text-[#abacac]">{item.description}</p>
+              <h2 className="lg:text-[2.4rem] text-[1.5rem] leading-tight font-semibold mb-2">
+                {item.title}
+              </h2>
+              <p className="lg:text-[15px] text-[17px]  text-[#abacac]">
+                {item.description}
+              </p>
             </div>
             <div className="lg:w-1/2">
               <img
                 src={item.src}
-                className="max-w-full h-60"
+                className="max-w-full lg:h-60"
                 alt={item.title}
               />
             </div>
@@ -406,21 +434,21 @@ export default function Home() {
         ))}
       </div>
       <div className="justify-center mt-[6rem]">
-        <p className="text-[3.2rem] justify-center flex font-semibold">
+        <p className="lg:text-[3.2rem] text-[2.2rem] justify-center flex font-semibold">
           Supported formats
         </p>
-        <p className="text-md flex justify-center text-[#abacac]">
+        <p className="lg:text-md text-[16px] mx-2 text-center flex justify-center text-[#abacac]">
           Feedback is time-consuming and confusing for digital creators and
           clients.{" "}
         </p>
-        <p className="text-md flex justify-center text-[#abacac]">
+        <p className="lg:text-md text-[16px] mx-2 flex justify-center text-[#abacac]">
           Miscommunication leads to conflicts and delays.
         </p>
-        <div className="mt-10 grid grid-cols-1 lg:flex lg:justify-center  gap-4 mx-[8rem]">
+        <div className="mt-10 grid grid-cols-1 lg:flex lg:justify-center  gap-4 mx-10 lg:mx-[8rem]">
           {formats.map((format, index) => (
             <div
               key={index}
-              className="p-4 rounded-2xl shadow-2xl w-[13rem] text-white"
+              className="p-4 rounded-2xl shadow-2xl lg:w-[13rem] w-[20rem] text-white"
               style={{
                 background:
                   "linear-gradient(180deg, #1e293b 0%, #344561 5%, #1e293b 100%, #1e293b 100%, #1e293b 100%)",
@@ -453,10 +481,10 @@ export default function Home() {
         </div>
       </div>
 
-      <p className="text-[3.2rem] justify-center flex font-semibold mt-[6rem]">
+      <p className="lg:text-[3.2rem] text-[2.2rem] justify-center flex font-semibold mt-[6rem]">
         What users say
       </p>
-      <p className="text-lg flex justify-center text-[#abacac]">
+      <p className="lg:text-lg text-md lg:flex lg:justify-center mx-2 text-center text-[#abacac]">
         Read why thousands of creatives, marketers and entrepreneurs love us so
         much.
       </p>
@@ -468,7 +496,7 @@ export default function Home() {
       >
         <div
           className={`carousel gap-10 ${isRotating ? "rotate" : ""}`}
-          style={{ width: "80%", height: "300px" }}
+          style={{ width: "250%", height: "300px" }}
         >
           {comments.map((comment, index) => (
             <div
@@ -498,10 +526,45 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="mt-10">
+      {/* desktop view */}
+      <div className="mt-10 lg:block hidden">
         <div
           className={`carousel gap-10 ${isRotating ? "rotate" : ""}`}
-          style={{ width: "100%", height: "250px" }}
+          style={{ width: "110%", height: "250px" }}
+        >
+          {comments.map((comment, index) => (
+            <div
+              key={index}
+              className="carousel-item p-4 gap-2 rounded-2xl shadow-2xl flex flex-col  text-white"
+              style={{
+                background: `linear-gradient(
+                  180deg, 
+                  #1e293b 0%, 
+                  #344561 5%, 
+                  #1e293b 100%,
+                  #1e293b 100%,
+                  #1e293b 100%
+                )`,
+                border: "0.1px solid gray",
+              }}
+            >
+              <p className="text-md italic text-[#cacaca]">{comment.comment}</p>
+              <div className="flex items-center gap-4">
+                <img
+                  className="rounded-full justify-start w-[3rem]"
+                  src="/Niimbee.png"
+                />
+                <p className="text-[#cacaca] font-semibold">{comment.name}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* mobile view */}
+      <div className="mt-10 lg:hidden">
+        <div
+          className={`carousel gap-10 ${isRotating ? "rotate" : ""}`}
+          style={{ width: "300%", height: "250px" }}
         >
           {comments.map((comment, index) => (
             <div
@@ -532,14 +595,14 @@ export default function Home() {
         </div>
       </div>
       <div className="leading-tight">
-        <p className="text-[3.2rem] justify-center flex font-semibold mt-[6rem]">
+        <p className="lg:text-[3.2rem] text-[2.2rem] justify-center flex font-semibold mt-[6rem]">
           It's simpler with
         </p>
-        <p className="text-[3.2rem] justify-center flex font-semibold ">
+        <p className="lg:text-[3.2rem] text-[2.2rem] justify-center flex font-semibold ">
           Niimblr
         </p>
       </div>
-      <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3 mx-[10rem] lg:justify-center">
+      <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:mx-[10rem] mx-[2rem] lg:justify-center">
         {how.map((format, index) => (
           <div
             key={index}
@@ -602,38 +665,40 @@ export default function Home() {
               )}
               {format.title === "Audio" && <IoHeadset size={40} className="" />}
             </div>
-            <h2 className="text-[1.5rem]  font-semibold mb-2">{format.title}</h2>
+            <h2 className="text-[1.5rem]  font-semibold mb-2">
+              {format.title}
+            </h2>
             <p className="text-[15px] text-[#abacac] ">{format.description}</p>
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-center h-screen">
+      <div className="lg:m-0 mx-5 flex items-center justify-center lg:h-screen my-16">
         <div
-          className="px-4 py-10 rounded-2xl grid shadow-2xl w-[70rem] text-white"
+          className="px-4 lg:py-10 py-2 rounded-2xl grid shadow-2xl w-[70rem] text-white"
           style={{
             background:
               "linear-gradient(180deg, #1e293b 0%, #1e293b 5%, #122f4b 100%, #1e293b 100%, #1e293b 100%)",
           }}
         >
-          <p className="text-[3.2rem] justify-center flex font-bold">
+          <p className="lg:text-[3.2rem] text-[2rem] justify-center flex font-bold">
             Get more work done
           </p>
-          <p className="text-xl mt-5 text-[#cacaca] justify-center flex">
+          <p className="lg:text-xl text-center text-md mt-5 text-[#cacaca] justify-center flex">
             Start using Niimblr today and see what a difference it can make to
             your
           </p>
-          <p className="text-xl p-1 text-[#cacaca] justify-center flex">
+          <p className="lg:text-xl text-center text-md p-1 text-[#cacaca] justify-center flex">
             daily back and forth with clients. Simply sign up, create a project,
             and
           </p>
-          <p className="text-xl p-1 text-[#cacaca] justify-center flex">
+          <p className="lg:text-xl text-center text-md p-1 text-[#cacaca] justify-center flex">
             you are ready for a new way of working with content feedback.
           </p>
-          <p className="text-xl p-1 text-[#cacaca] justify-center flex">
+          <p className="lg:text-xl text-center text-md p-1 text-[#cacaca] justify-center flex">
             Trust us; you will not want to go back
           </p>
-          <div className="bg-[#0b82fa] my-[2rem] mx-auto items-center justify-between  font-semibold text-xl py-3 px-5 rounded-xl w-[20rem] flex">
-            <p>Create Your Free Account</p>
+          <div className="bg-[#0b82fa] mt-[2rem] mb:-[1.5rem] lg:mb-[2rem] mx-auto items-center justify-between  font-semibold text-sm lg:text-xl  px-5 mb-3 rounded-xl lg:w-[20rem] w-[15rem] flex">
+            <p className=" py-3 pb-3">Create Your Free Account</p>
             <GrFormNext />
           </div>
         </div>
@@ -642,15 +707,15 @@ export default function Home() {
         Are you a creator?
       </p>
 
-      <p className="text-[3.2rem] justify-center flex font-semibold">
+      <p className="lg:text-[3.2rem] text-[2.2rem] text-center mx-[1.2rem] lg:mx-0 justify-center flex font-semibold">
         Your clients will love it
       </p>
 
-      <p className="text-md flex justify-center text-[#abacac]">
+      <p className="text-md flex justify-center mx-[1.2rem] text-center lg:mx-0 text-[#abacac]">
         Niimblr is the preferred feedback platform for client-facing
         professions, including:
       </p>
-      <div className="mt-4 grid grid-cols-1 gap-4 lg:flex mx-[10rem] lg:justify-center">
+      <div className="mt-4 gap-4 flex flex-wrap lg:flex lg:mx-[10rem] mx-[3rem]  justify-center">
         {professions.map((id, name) => (
           <div
             key={id}
@@ -674,39 +739,44 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <div className="flex mx-[11rem]">
+      <div className="lg:flex text-center lg:mx-[11rem] mx-[2rem]">
         <div>
-          <p className="text-md mt-16 text-[#cacaca]">
+          <p className="lg:text-md text-[17px] mt-16 text-[#cacaca]">
             Niimblr empowers your clients to provide clear and transparent
             feedback. Everything agreed upon is visible on the platform,
             eliminating discussions and confusion. Clients can easily access and
             review files in 2D, 3D, or video and download them directly from the
             platform.
           </p>
-          <p className="text-md mt-8 text-[#cacaca]">
+          <p className="lg:text-md text-[17px] mt-8 text-[#cacaca]">
             No special setup or artist assistance needed – simply send them an
             invite link to Niimblr and they are ready to provide feedback.
           </p>
-          <div className="bg-[#0b82fa] my-5 lg:ml-0 ml-[1rem] mt-7 items-center justify-between  text-lg py-3 px-5 rounded-xl w-[12rem] flex">
+          <div className="bg-[#0b82fa] my-5 mx-auto lg:ml-0  mt-7 items-center justify-between  text-lg py-3 px-5 rounded-xl w-[12rem] flex">
             <p className="">Try for free</p>
             <GrFormNext className="font-bold" />
           </div>
         </div>
-        <img src="/image-6.png" className="h-[16rem] ml-12 mt-16" />
+        <img
+          src="/image-6.png"
+          className="h-[16rem] lg:block hidden ml-12 mt-16"
+        />
       </div>
-      <div className="bg-[#1e1e1e] pl-[11rem] pr-[8rem] py-[5rem] flex">
-        <img src="/Founders.png" className="h-[22rem] py-[1rem] " />
-        <div className="ml-[2rem]">
-          <p className="text-[#0d80fa] text-xl font-bold">The Team</p>
-          <p className="text-[3rem] justify-center pt-2 flex font-semibold leading-tight">
+      <div className="bg-[#1e1e1e] lg:pl-[11rem] px-[1rem] lg:pr-[8rem] lg:py-[5rem] py-[2rem] lg:flex">
+        <img src="/Founders.png" className="lg:h-[22rem] py-[1rem] " />
+        <div className="lg:ml-[2rem]">
+          <p className="text-[#0d80fa] text-xl lg:text-start text-center font-bold">
+            The Team
+          </p>
+          <p className="lg:text-[3rem] text-[2.2rem] lg:text-start text-center justify-center pt-2 flex font-semibold leading-tight">
             Meet the amazing Creators of Niimblr
           </p>
-          <p className="text-md mt-6 text-[#cacaca]">
+          <p className="lg:text-md text-center text-[17px] lg:text-start mt-6 text-[#cacaca]">
             The Niimblr platform is designed by a team with 45+ years of
             experience in product visualization, game design, engineering, and
             more.
           </p>
-          <p className="text-md mt-5 text-[#cacaca]">
+          <p className="lg:text-md text-[17px] mt-5 text-center lg:text-start text-[#cacaca]">
             We founded our company in 2021 in Copenhagen, Denmark, with the
             mission of revolutionizing the feedback process between digital
             creators and their clients.
@@ -717,18 +787,21 @@ export default function Home() {
         Still confused
       </p>
       <div className="leading-tight">
-        <p className="text-[3.2rem] justify-center pt-2 flex font-semibold leading-tight">
+        <p className="lg:text-[3.2rem] hidden justify-center pt-2 lg:flex font-semibold leading-tight">
           See the Frequently Asked
         </p>
-        <p className="text-[3.2rem] justify-center  flex font-semibold leading-tight">
+        <p className="lg:text-[3.2rem] hidden justify-center  lg:flex font-semibold leading-tight">
           {" "}
           Questions
         </p>
-        <p className="text-md p-1 leading-tight text-[#cacaca] justify-center flex">
+        <p className="lg:hidden text-center text-[2.2rem] justify-center pt-2 flex font-semibold leading-tight">
+          See the Frequently Asked Questions
+        </p>
+        <p className="text-md text-center lg:p-1 p-5 leading-tight text-[#cacaca] justify-center flex">
           You ask. We tell. We have compiled the answers to some of the most
           asked questions.
         </p>
-        <p className="text-md  text-[#cacaca] justify-center flex">
+        <p className="text-md  text-center lg:p-0 px-5 text-[#cacaca] justify-center lg:flex">
           Should you need more information, do not hesitate to&nbsp;{" "}
           <span className="text-[#0d80fa] font-semibold underline">
             contact us
@@ -736,7 +809,7 @@ export default function Home() {
           .
         </p>
       </div>
-      <div className="flex flex-col mx-[11rem] items-center justify-start mb-[2rem]  ">
+      <div className="flex flex-col lg:mx-[11rem] mx-[1rem] items-center justify-start mb-[2rem]  ">
         <div className="flex  flex-col  items-center w-full mt-8 lg:mt-12">
           {faqs.map((faq, index) => (
             <FAQItem
@@ -757,14 +830,14 @@ export default function Home() {
         //     "linear-gradient(180deg, #48a1fb 0%, #1989fa 5%, #48a1fb 100%, #48a1fb 100%, #48a1fb 100%)",
         // }}
       >
-        <p className="text-[3.2rem] font-semibold flex justify-center text-black mb-[1rem]">
+        <p className="lg:text-[3.2rem] mx-[1rem] lg:mx-[0rem] text-[2.2rem] text-center font-semibold flex justify-center text-black mb-[1rem]">
           Ready to get started?
         </p>
-        <p className="font-light flex  text-md text-black justify-center">
+        <p className="font-light flex  text-md mx-[2rem] lg:mx-[0rem] text-black justify-center">
           Start using Niimblr today and see what a difference it can make to
           your daily back and
         </p>
-        <p className="font-light text-md text-black flex items-center justify-center">
+        <p className="font-light text-md mx-[2rem] lg:mx-[0rem] text-black flex items-center justify-center">
           forth with clients. Simply sign up, create a project, and you are
           ready for a new way of
         </p>
@@ -778,7 +851,7 @@ export default function Home() {
         </div>
         <p className="font-light text-md text-black flex pt-2 justify-center">
           Free forever.<span className="font-semibold "> No credit card </span>{" "}
-           &nbsp;required
+          &nbsp;required
         </p>
       </div>
     </div>
