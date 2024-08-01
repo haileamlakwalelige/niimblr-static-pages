@@ -5,3 +5,29 @@
 h1, p, body{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-clip: content-box;
+    border-radius: 100%;
+    
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    background-color: #3d3f41; 
+    border-color: #3d3f41;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"%3E%3Cpath d="M12 5.5l-6.25 6.25L4 9.5" stroke="%230b82fa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0.6rem 0.6rem;
+  }
+  
+  .custom-checkbox:checked {
+   
+   
+    background-repeat: no-repeat;
+  }

@@ -5,6 +5,7 @@ import Blog from "./pages/Blog/blog";
 import BlogDetail from "./pages/Blog/blog_detail";
 
 import Home from "./pages/Landing_page/landing_page";
+import Pricing from "./pages/Pricing/Pricing";
 
 export default function App() {
   return (
@@ -18,8 +19,10 @@ export default function App() {
         <div className="pt-32">
           <Routes>
             <Route path="/blog" element={<Blog />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/" element={<Home />} />
             <Route path="/blog/:id" element={<BlogDetail />} />
+            
           </Routes>
           <footer>
             <Footer />

@@ -23,7 +23,7 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="w-full h-[60px] z-50" />
         </Link>
         <div className="hidden lg:flex justify-center items-center gap-4 lg:gap-10">
-          <p className="font-medium cursor-pointer">Pricing</p>
+          <Link to='/pricing' className="font-medium cursor-pointer">Pricing</Link>
           <Link to="/blog" className="font-medium cursor-pointer">
             Blog
           </Link>
@@ -55,9 +55,13 @@ const Navbar = () => {
             className="fixed top-0 left-0 w-screen h-screen bg-slate-950 flex justify-center items-center lg:hidden z-30"
           >
             <div className="flex flex-col justify-center items-center gap-8">
-              <p onClick={closeMenu} className="font-medium cursor-pointer">
+              <Link
+                to="/pricing"
+                onClick={closeMenu}
+                className="font-medium cursor-pointer"
+              >
                 Pricing
-              </p>
+              </Link>
               <Link
                 to="/blog"
                 onClick={closeMenu}

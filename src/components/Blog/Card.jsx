@@ -10,7 +10,7 @@ export default function BCard({ blog, onReadMore}) {
           alt="Design"
         />
         <p className="absolute top-0 right-0 bg-[#69727d] text-white px-2 py-1 rounded-bl-2xl m-2">
-          {Blob.feature}
+          {blog.feature}
         </p>
       </figure>
       <div className="card-body">
