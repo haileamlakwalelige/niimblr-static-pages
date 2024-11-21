@@ -23,14 +23,27 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="w-full h-[60px] z-50" />
         </Link>
         <div className="hidden lg:flex justify-center items-center gap-4 lg:gap-10">
-          <Link to='/pricing' className="font-medium cursor-pointer">Pricing</Link>
+          <Link to="/pricing" className="font-medium cursor-pointer">
+            Pricing
+          </Link>
           <Link to="/blog" className="font-medium cursor-pointer">
             Blog
           </Link>
-          <p className="bg-slate-800 border-gray-500 border-[1px] rounded py-2.5 px-8 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer">
+          <p
+            onClick={() => {
+              closeMenu();
+              window.location.href = "https://niimblr-clone.vercel.app/";
+            }}
+            className="bg-slate-800 border-gray-500 border-[1px] rounded py-2.5 px-8 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer"
+          >
             Log In
           </p>
-          <p className="bg-blue-600 text-white px-12 rounded py-2.5 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer text-lg">
+          <p
+            onClick={() => {
+              window.location.href = "https://niimblr-clone.vercel.app/";
+            }}
+            className="bg-blue-600 text-white px-12 rounded py-2.5 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer text-lg"
+          >
             Get Started
           </p>
         </div>
@@ -69,25 +82,24 @@ const Navbar = () => {
               >
                 Blog
               </Link>
-          <p
-  onClick={() => {
-    closeMenu();
-    window.location.href = "https://niimblr-clone.vercel.app/";
-  }}
-  className="bg-slate-800 border-gray-500 border-[1px] rounded py-2.5 px-8 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer"
->
-  Log In
-</p>
-<p
-  onClick={() => {
-    closeMenu();
-    window.location.href = "https://niimblr-clone.vercel.app/";
-  }}
-  className="bg-blue-600 text-white px-12 rounded py-2.5 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer text-lg"
->
-  Get Started
-</p>
-
+              <p
+                onClick={() => {
+                  closeMenu();
+                  window.location.href = "https://niimblr-clone.vercel.app/";
+                }}
+                className="bg-slate-800 border-gray-500 border-[1px] rounded py-2.5 px-8 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer"
+              >
+                Log In
+              </p>
+              <p
+                onClick={() => {
+                  closeMenu();
+                  window.location.href = "https://niimblr-clone.vercel.app/";
+                }}
+                className="bg-blue-600 text-white px-12 rounded py-2.5 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer text-lg"
+              >
+                Get Started
+              </p>
             </div>
           </motion.div>
         )}
