@@ -69,20 +69,25 @@ const Navbar = () => {
               >
                 Blog
               </Link>
-              <Link to="https://niimblr-clone.vercel.app/">
-                 <p
-                onClick={closeMenu}
-                className="bg-slate-800 border-gray-500 border-[1px] rounded py-2.5 px-8 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer"
-              >
-                Log In
-              </p>
-              </Link>
-              <p
-                onClick={closeMenu}
-                className="bg-blue-600 text-white px-12 rounded py-2.5 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer text-lg"
-              >
-                Get Started
-              </p>
+          <p
+  onClick={() => {
+    closeMenu();
+    window.location.href = "https://niimblr-clone.vercel.app/";
+  }}
+  className="bg-slate-800 border-gray-500 border-[1px] rounded py-2.5 px-8 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer"
+>
+  Log In
+</p>
+<p
+  onClick={() => {
+    closeMenu();
+    window.location.href = "https://niimblr-clone.vercel.app/";
+  }}
+  className="bg-blue-600 text-white px-12 rounded py-2.5 hover:bg-slate-950 hover:text-white font-semibold cursor-pointer text-lg"
+>
+  Get Started
+</p>
+
             </div>
           </motion.div>
         )}
